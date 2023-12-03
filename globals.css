@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* stick footer to bottom of page when content isn't long enough */
+html,
+body,
+#__next {
+  /* background-color: rgb(25, 55, 24); */
+  @apply h-full;
+}
+
+footer {
+  position: sticky;
+  top: 100vh;
+}
+/* End sticky footer */

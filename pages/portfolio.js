@@ -1,11 +1,15 @@
 import Project from "components/Project"
+import Head from "next/head"
 import { getJobs } from "storyblok/api"
 
 export default function Portfolio({ jobs }) {
   return (
     <>
+      <Head>
+        <title>Project Portfolio | Abel Marin Jr.</title>
+      </Head>
       <main>
-        <h1 className="text-center pt-6">Projects</h1>
+        <h1 className="text-center pt-6">Project Portfolio</h1>
         {jobs.map((job) => (
           <section className="px-6 py-6 " key={job._uid}>
             <div className="max-w-screen-lg bg- mx-auto shadow-section rounded-xl px-6 py-8">

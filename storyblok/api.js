@@ -3,7 +3,7 @@ export async function getJobs() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Token: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
+      Token: process.env.STORYBLOK_API_TOKEN,
       Version: "published",
     },
     body: JSON.stringify({

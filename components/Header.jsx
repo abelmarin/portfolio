@@ -11,10 +11,10 @@ export default function Header({ socialMedia }) {
       <nav className="flex gap-4 items-center">
         <Link href="/portfolio">Portfolio</Link>
         <Link href="/contact">Contact</Link>
-        <Link href={socialMedia["GitHub"]} target="_blank">
+        <Link href={socialMedia?.GitHub} target="_blank">
           <GitHub className="w-8 aspect-square" />
         </Link>
-        <Link href={socialMedia["LinkedIn"]} target="_blank">
+        <Link href={socialMedia?.LinkedIn} target="_blank">
           <LinkedIn className="w-8 aspect-square" />
         </Link>
       </nav>

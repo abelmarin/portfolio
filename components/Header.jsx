@@ -4,7 +4,7 @@ import LinkedIn from "public/assets/linkedin.svg"
 
 export default function Header({ socialMedia }) {
   return (
-    <header className="px-6 py-8 max-w-screen-lg mx-auto flex justify-between items-center shadow-section rounded-3xl mt-12 bg-white">
+    <header className="px-6 py-8 max-w-screen-lg mx-auto flex flex-col sm:flex-row gap-4 justify-between items-center shadow-section rounded-3xl mt-12 bg-white">
       <Link href="/">
         <h1>Abel Marin Jr.</h1>
       </Link>

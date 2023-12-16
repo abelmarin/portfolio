@@ -10,13 +10,18 @@ body,
   @apply h-full;
 }
 
+html {
+  @apply px-5;
+}
+
 footer {
   position: sticky;
   top: 100vh;
 }
 /* End sticky footer */
 
-h1 {
+h1,
+h2 {
   text-align: center;
 }
 

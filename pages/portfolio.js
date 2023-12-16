@@ -10,7 +10,7 @@ export default function Portfolio({ jobs }) {
       {jobs.map((job) => (
         <section className="py-6" id={job.title} key={job._uid}>
           <div className="max-w-screen-lg bg- mx-auto shadow-section rounded-xl px-6 py-8">
-            <h2 className="">{job.title}</h2>
+            <h2 className="pb-8">{job.title}</h2>
             {job?.projects?.map((project) => (
               <Project {...project.content} key={project._uid} />
             ))}

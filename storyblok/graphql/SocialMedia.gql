@@ -1,0 +1,8 @@
+query SocialMedia {
+  DatasourceEntries(datasource: "social-media") {
+    items {
+      value
+      name
+    }
+  }
+}

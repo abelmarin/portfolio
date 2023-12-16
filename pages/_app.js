@@ -4,7 +4,7 @@ import "styles.css"
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header />
+      <Header {...pageProps} />
       <Component {...pageProps} />
     </>
   )

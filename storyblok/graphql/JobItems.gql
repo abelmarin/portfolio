@@ -1,0 +1,16 @@
+query GetAllJobItems {
+  JobItems {
+    items {
+      content {
+        title
+        projects {
+          content
+        }
+        end
+        content
+        beginning
+        _uid
+      }
+    }
+  }
+}

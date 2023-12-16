@@ -3,6 +3,7 @@ module.exports = {
     domains: ["a-us.storyblok.com"],
   },
   webpack(config) {
+    // Handle SVGs
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
@@ -17,6 +18,14 @@ module.exports = {
         },
       ],
     })
+
+    // Graphql
+    config.module.rules.push({
+      test: /\.(graphql|gql)$/,
+      exclude: /node_modules/,
+      loader: "graphql-tag/loader",
+    })
+
     return config
   },
   generateBuildId: () => "build",

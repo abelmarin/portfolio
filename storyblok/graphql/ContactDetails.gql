@@ -1,0 +1,8 @@
+query ContactDetailsDatasource {
+  DatasourceEntries(datasource: "contact-details") {
+    items {
+      value
+      name
+    }
+  }
+}

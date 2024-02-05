@@ -6,9 +6,11 @@ export default function Home({ jobs }) {
   return (
     <>
       <Meta title="Home" />
-      {jobs.map((job) => (
-        <Job {...job} key={job?._uid} />
-      ))}
+      <div className="divide-y divide-white">
+        {jobs.map((job) => (
+          <Job {...job} key={job?._uid} />
+        ))}
+      </div>
     </>
   )
 }

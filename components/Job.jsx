@@ -37,7 +37,7 @@ export default function Job({ title, content, projects }) {
   const [currentProject, setCurrentProject] = useState(projects[0])
 
   return (
-    <section id={title} className="pb-12 last:pb-0 flex">
+    <section id={title} className="py-4 md:py-8 first:pt-0 last:pb-0 flex">
       <div className="md:basis-1/2">
         <h2 className="pb-4 text-xl1">{title}</h2>
         <div className="pb-8">{render(content)}</div>
@@ -48,9 +48,9 @@ export default function Job({ title, content, projects }) {
             <Project {...project.content} key={project._uid} />
         ))} */}
       </div>
-      <nav className="basis-1/2 hidden md:flex flex-col text-right">
+      <nav className="basis-1/2 hidden md:flex flex-col items-end">
         {projects.map((project) => (
-          <button onClick={() => setCurrentProject(project)} key={project?._uid} className="text-right">
+          <button onClick={() => setCurrentProject(project)} key={project?._uid} className="text-right w-max">
             {project.title}
           </button>
         ))}

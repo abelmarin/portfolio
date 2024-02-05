@@ -3,7 +3,10 @@ import { JobItems, ContactDetails, SocialMedia } from "storyblok/graphql"
 
 export async function getJobs() {
   const data = await query({ query: JobItems, type: "JobItems" }).then((res) =>
-    res.items.map((item) => ({ projects: item.content.projects.reverse(), ...item.content })),
+    res.items.map((item) => ({
+      ...item.content,
+      projects: item.content.projects.reverse().map(({ content }) => content),
+    })),
   )
 
   return data

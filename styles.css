@@ -1,30 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* stick footer to bottom of page when content isn't long enough */
-html,
-body,
-#__next {
-  /* background-color: rgb(25, 55, 24); */
-  @apply h-full;
-}
-
 html {
-  @apply px-5;
-}
-
-footer {
-  position: sticky;
-  top: 100vh;
-}
-/* End sticky footer */
-
-h1,
-h2 {
-  text-align: center;
-}
-
-a:hover {
-  text-decoration: underline;
+  background-color: #0d0d0d;
+  color: white;
+  font-family: theme("fontFamily.primary");
+  @apply p-4 md:px-10 md:py-20;
 }

@@ -1,21 +1,27 @@
+import { getJobs, getContactDetails, getSocialMedia } from "storyblok/api"
 import Meta from "components/Meta"
-import { getContactDetails, getSocialMedia } from "storyblok/api"
+import Job from "components/Job"
 
-export default function Home() {
+export default function Home({ jobs }) {
   return (
-    <main>
+    <>
       <Meta title="Home" />
-      home
-    </main>
+      {jobs.map((job) => (
+        <Job {...job} key={job?._uid} />
+      ))}
+    </>
   )
 }
 
 export async function getStaticProps() {
+  const jobs = await getJobs()
   const socialMedia = await getSocialMedia()
   const contactDetails = await getContactDetails()
 
   return {
     props: {
+      jobs,
+
       socialMedia,
       contactDetails,
     },

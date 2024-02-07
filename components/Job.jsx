@@ -33,25 +33,25 @@ function Project({ title, content, image, url, github }) {
   )
 }
 
-export default function Job({ title, content, projects }) {
-  const [currentProject, setCurrentProject] = useState(projects[0])
+export default function Job({ jobs }) {
+  const [currentJob, setCurrentJob] = useState(jobs[0])
 
   return (
-    <section id={title} className="py-4 md:py-8 first:pt-0 last:pb-0 flex">
-      <div className="md:basis-1/2">
-        <h2 className="pb-4 text-xl1">{title}</h2>
-        <div className="pb-8">{render(content)}</div>
-        <div className="flex">
-          <Project {...currentProject} />
+    <section className="pb-4 md:pb-8 flex">
+      <div className="md:basis-2/3">
+        <h2 className="pb-4 text-xl1">{currentJob?.title}</h2>
+        <div className="pb-8">{render(currentJob?.content)}</div>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          {currentJob?.projects?.map((project) => (
+            <Project {...project} key={project._uid} />
+          ))}
         </div>
-        {/* {projects?.map((project) => (
-            <Project {...project.content} key={project._uid} />
-        ))} */}
       </div>
-      <nav className="basis-1/2 hidden md:flex flex-col items-end">
-        {projects.map((project) => (
-          <button onClick={() => setCurrentProject(project)} key={project?._uid} className="text-right w-max">
-            {project.title}
+      <nav className="basis-1/3 hidden md:flex flex-col items-end sticky top-12">
+        {jobs.map((job) => (
+          <button onClick={() => setCurrentJob(job)} key={job?._uid} className="text-right w-max hover:underline">
+            {job.title}
           </button>
         ))}
       </nav>

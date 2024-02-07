@@ -7,11 +7,14 @@ export default function Header({ socialMedia }) {
     <header className="mx-auto flex flex-col sm:flex-row gap-4 justify-between items-center pb-4 mb-12 border-b border-white">
       <div>
         <Link href="/">
-          <h1 className="font-light text-l2 md:text-xl2">Abel Marin Jr.</h1>
+          <h1 className="font-light text-l2 lg:text-xl2">Abel Marin Jr.</h1>
         </Link>
         <h2 className="text-m2 text-center sm:text-left">Web Developer</h2>
       </div>
       <nav className="flex gap-4 items-center">
+        <Link href="/projects" className="hover:underline">
+          Projects
+        </Link>
         <Link href="/contact" className="hover:underline">
           Contact
         </Link>

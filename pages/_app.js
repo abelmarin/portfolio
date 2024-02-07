@@ -6,7 +6,7 @@ import "@fontsource/zen-maru-gothic/400.css"
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <main className="max-w-screen-xl mx-auto border border-white p-4 md:p-10">
+      <main className="max-w-screen-xl mx-auto border border-white p-4 lg:p-10">
         <Header {...pageProps} />
         <Component {...pageProps} />
       </main>

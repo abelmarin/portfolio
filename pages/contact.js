@@ -1,7 +1,7 @@
 import Link from "next/link"
 import GitHub from "public/assets/github.svg"
 import LinkedIn from "public/assets/linkedin.svg"
-import { getContactDetails, getSocialMedia } from "storyblok/api"
+import { getGlobals } from "storyblok/api"
 
 export default function Contact({ socialMedia, contactDetails }) {
   return (
@@ -34,14 +34,12 @@ export default function Contact({ socialMedia, contactDetails }) {
 }
 
 export async function getStaticProps() {
-  const socialMedia = await getSocialMedia()
-  const contactDetails = await getContactDetails()
+  const globals = await getGlobals()
 
   return {
     props: {
       title: "Contact",
-      socialMedia,
-      contactDetails,
+      ...globals,
     },
   }
 }

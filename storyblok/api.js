@@ -18,14 +18,12 @@ export async function getJobs() {
   return data
 }
 
-export async function getContactDetails() {
-  const data = await query({ query: ContactDetails, type: "DatasourceEntries" })
+export async function getGlobals() {
+  const contactDetails = await query({ query: ContactDetails, type: "DatasourceEntries" })
+  const socialMedia = await query({ query: SocialMedia, type: "DatasourceEntries" })
 
-  return data.items.reduce((acc, { name, value }) => ({ [name]: value, ...acc }), {})
-}
-
-export async function getSocialMedia() {
-  const data = await query({ query: SocialMedia, type: "DatasourceEntries" })
-
-  return data.items.reduce((acc, { name, value }) => ({ [name]: value, ...acc }), {})
+  return {
+    contactDetails: contactDetails.items.reduce((acc, { name, value }) => ({ [name]: value, ...acc }), {}),
+    socialMedia: socialMedia.items.reduce((acc, { name, value }) => ({ [name]: value, ...acc }), {}),
+  }
 }

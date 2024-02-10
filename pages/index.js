@@ -1,4 +1,4 @@
-import { getContactDetails, getSocialMedia } from "storyblok/api"
+import { getGlobals } from "storyblok/api"
 
 export default function Home({ jobs }) {
   return (
@@ -9,14 +9,12 @@ export default function Home({ jobs }) {
 }
 
 export async function getStaticProps() {
-  const socialMedia = await getSocialMedia()
-  const contactDetails = await getContactDetails()
+  const globals = await getGlobals()
 
   return {
     props: {
       title: "Home",
-      socialMedia,
-      contactDetails,
+      ...globals,
     },
   }
 }

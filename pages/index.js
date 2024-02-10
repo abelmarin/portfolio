@@ -1,10 +1,9 @@
 import { getContactDetails, getSocialMedia } from "storyblok/api"
-import Meta from "components/Meta"
 
 export default function Home({ jobs }) {
   return (
     <>
-      <Meta title="Home" />
+      <section></section>
     </>
   )
 }
@@ -15,6 +14,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      title: "Home",
       socialMedia,
       contactDetails,
     },

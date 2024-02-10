@@ -1,4 +1,3 @@
-import Meta from "components/Meta"
 import Link from "next/link"
 import GitHub from "public/assets/github.svg"
 import LinkedIn from "public/assets/linkedin.svg"
@@ -7,7 +6,6 @@ import { getContactDetails, getSocialMedia } from "storyblok/api"
 export default function Contact({ socialMedia, contactDetails }) {
   return (
     <>
-      <Meta title="Contact" />
       <section>
         <div>
           Email:{" "}
@@ -41,6 +39,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      title: "Contact",
       socialMedia,
       contactDetails,
     },

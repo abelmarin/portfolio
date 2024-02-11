@@ -11,6 +11,7 @@ query GetAllJobItems {
         beginning
         _uid
       }
+      slug
     }
   }
 }

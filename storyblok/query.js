@@ -1,6 +1,6 @@
 import { print } from "graphql/language/printer"
 
-export default async function fetchQuery({ query, type }) {
+export default async function fetchQuery({ query, type, variables }) {
   query = typeof query === "object" ? print(query) : query
 
   try {
@@ -13,12 +13,13 @@ export default async function fetchQuery({ query, type }) {
       },
       body: JSON.stringify({
         query: query,
+        variables: { ...variables },
       }),
     }).then((response) => response.json())
 
     return data[type]
   } catch (error) {
     console.error(error)
-    return {}
+    return false
   }
 }

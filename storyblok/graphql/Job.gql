@@ -1,0 +1,15 @@
+query Job($slug: ID!) {
+  JobItem(id: $slug) {
+    content {
+      title
+      projects {
+        content
+      }
+      end
+      content
+      beginning
+      _uid
+    }
+    slug
+  }
+}

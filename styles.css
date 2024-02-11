@@ -7,3 +7,7 @@ html {
   font-family: theme("fontFamily.primary");
   @apply p-4 lg:px-10 lg:py-12;
 }
+
+h1 {
+  @apply font-light text-l2 lg:text-xl2;
+}

@@ -2,7 +2,7 @@ import { getGlobals } from "storyblok/api"
 
 export default function Page() {
   return (
-    <section className="">
+    <section>
       <h1>404 Not Found</h1>
     </section>
   )

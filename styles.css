@@ -11,3 +11,7 @@ html {
 h1 {
   @apply font-light text-l2 lg:text-xl2;
 }
+
+.main-content a {
+  @apply underline hover:no-underline;
+}

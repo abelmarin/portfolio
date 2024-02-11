@@ -12,7 +12,7 @@ export async function getStaticProps({ params: { job } }) {
   return {
     props: {
       job: jobItem ?? null,
-      title: job.replaceAll("-", " "),
+      title: jobItem.title,
       ...globals,
     },
   }

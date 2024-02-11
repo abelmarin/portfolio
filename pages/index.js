@@ -3,7 +3,9 @@ import { getGlobals } from "storyblok/api"
 export default function Home({ jobs }) {
   return (
     <>
-      <section></section>
+      <section>
+        <div>JavaScript | HTML | CSS | React.js | Next.js</div>
+      </section>
     </>
   )
 }

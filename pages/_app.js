@@ -18,7 +18,7 @@ export default function App({ Component, pageProps: { title, ...remainingProps }
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#0d0d0d" />
         <meta name="theme-color" content="#0d0d0d" />
       </Head>
-      <main className="max-w-screen-xl mx-auto border border-white px-4 pt-4 pb-8 lg:p-10">
+      <main className="max-w-screen-xl mx-auto relative px-4 pt-4 pb-8 lg:p-10">
         <Header {...remainingProps} />
         <div className="main-content">
           <Component {...remainingProps} />

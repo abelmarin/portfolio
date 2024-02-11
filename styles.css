@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 html {
-  background-color: #0d0d0d;
+  background-color: theme("colors.gray");
   color: white;
   font-family: theme("fontFamily.primary");
+  height: 100dvh;
+
   @apply p-4 lg:px-10 lg:py-12;
+}
+
+#__next,
+body {
+  @apply min-h-full max-w-screen-xl mx-auto;
+}
+
+body {
+  @apply border border-white;
 }
 
 h1 {

@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { render } from "storyblok-rich-text-react-renderer"
 
-export function Project({ title, content, image, url, github }) {
+export function Project({ title, content, image, url, github, figma }) {
   return (
     <article>
       <div className="flex flex-col gap-4">
@@ -22,6 +22,11 @@ export function Project({ title, content, image, url, github }) {
             {github?.url ? (
               <Link href={github.url} target="_blank">
                 View Github
+              </Link>
+            ) : null}
+            {figma?.url ? (
+              <Link href={figma.url} target="_blank">
+                View Figma
               </Link>
             ) : null}
           </div>

@@ -21,12 +21,12 @@ export default function Contact({ socialMedia, contactDetails }) {
         </div>
 
         <div className="flex gap-4 pt-8">
-          <Link href={socialMedia?.GitHub} target="_blank">
+          <a href={socialMedia?.GitHub} target="_blank">
             <GitHub className="w-8 h-8 aspect-square" />
-          </Link>
-          <Link href={socialMedia?.LinkedIn} target="_blank">
+          </a>
+          <a href={socialMedia?.LinkedIn} target="_blank">
             <LinkedIn className="w-8 h-8 aspect-square" />
-          </Link>
+          </a>
         </div>
       </section>
     </>

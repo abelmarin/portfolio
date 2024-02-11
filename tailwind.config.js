@@ -16,6 +16,10 @@ module.exports = {
       xl1: ["2.5rem", "3rem"], // 40px, 48px
       xl2: ["3.75rem", "4.375rem"], // 60px, 70px
     },
+    colors: {
+      gray: "#0d0d0d",
+      white: "#ffffff",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

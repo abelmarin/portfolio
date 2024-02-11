@@ -51,7 +51,7 @@ export default function Header({ socialMedia, jobs }) {
           <Link href="/projects" className="hover:underline">
             Projects
           </Link>
-          <ul className="lg:hidden group-hover:block lg:absolute bg-gray py-4 px-4 lg:pb-0">
+          <ul className="lg:hidden group-hover:block lg:absolute bg-gray py-4 px-4">
             {jobs.map((job) => (
               <li key={job._uid}>
                 <Link href={job.slug} className="hover:underline">

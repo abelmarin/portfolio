@@ -12,7 +12,7 @@ export default function App({ Component, pageProps: { title, ...remainingProps }
         <meta property="og:title" content={`${title} | Abel Marin Jr.`} />
         <meta property="twitter:title" content={`${title} | Abel Marin Jr.`} />
       </Head>
-      <main className="max-w-screen-xl mx-auto border border-white p-4 lg:p-10 min-h-[50dvh]">
+      <main className="max-w-screen-xl mx-auto border border-white p-4 lg:p-10">
         <Header {...remainingProps} />
         <div className="main-content">
           <Component {...remainingProps} />

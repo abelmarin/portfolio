@@ -1,5 +1,5 @@
-import Image from "next/image"
 import Link from "next/link"
+import Image from "next/image"
 import { render } from "storyblok-rich-text-react-renderer"
 
 export function Project({ title, content, image, url, github, figma }) {
@@ -40,26 +40,32 @@ export function Project({ title, content, image, url, github, figma }) {
   )
 }
 
-export default function JobSection({ jobs, currentJob }) {
+export default function JobSection({ jobs, currentJob, title, content }) {
   return (
-    <section className="pb-4 md:pb-8 flex">
-      <div className="md:basis-2/3">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {currentJob?.projects?.map((project) => (
-            <Project {...project} key={project._uid} />
-          ))}
-        </div>
-      </div>
-      <nav className="basis-1/3 hidden md:flex flex-col items-end sticky top-12">
-        <Link href="/projects" className="text-right w-max hover:underline">
+    <>
+      <nav className="basis-1/3 flex flex-wrap gap-4 justify-center mx-auto pb-12">
+        <Link href="/projects" className="text-m2 w-max">
           All Projects
         </Link>
         {jobs.map((job) => (
-          <Link href={job?.slug} key={job?._uid} className="text-right w-max hover:underline">
+          <Link href={job?.slug} key={job?._uid} className="text-m2 w-max">
             {job.title}
           </Link>
         ))}
       </nav>
-    </section>
+      {title ? (
+        <h2 className="mb-6 px-4 pt-2 pb-3 text-l2 sm:text-xl1 border-2 border-white w-max mx-auto lg:mx-0">{title}</h2>
+      ) : null}
+      {render(content) ? <div className="pb-8 text-m2 text-center lg:text-left">{render(content)}</div> : null}
+      <section className="pb-4 md:pb-8 fl">
+        <div className="md:basis-2/3">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {currentJob?.projects?.map((project) => (
+              <Project {...project} key={project._uid} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   )
 }

@@ -3,9 +3,7 @@ import JobSection from "components/JobSection"
 
 export default function Projects({ jobs, allJobs }) {
   return (
-    <>
-      <JobSection jobs={jobs} currentJob={allJobs} />
-    </>
+    <JobSection jobs={jobs} currentJob={allJobs} title="All Projects" content="A showcase of all of my projects." />
   )
 }
 

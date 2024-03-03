@@ -44,11 +44,11 @@ export default function JobSection({ jobs, currentJob, title, content }) {
   return (
     <>
       <nav className="basis-1/3 flex flex-wrap gap-4 justify-center mx-auto pb-12">
-        <Link href="/projects" className="text-m2 w-max">
+        <Link href="/projects" className="text-m2 w-max cursor-pointer">
           All Projects
         </Link>
         {jobs.map((job) => (
-          <Link href={job?.slug} key={job?._uid} className="text-m2 w-max">
+          <Link href={job?.slug} key={job?._uid} className="text-m2 w-max cursor-pointer">
             {job.title}
           </Link>
         ))}

@@ -57,7 +57,7 @@ export default function JobSection({ jobs, currentJob, title, content }) {
         <h2 className="mb-6 px-4 pt-2 pb-3 text-l2 sm:text-xl1 border-2 border-white w-max mx-auto lg:mx-0">{title}</h2>
       ) : null}
       {render(content) ? <div className="pb-8 text-m2 text-center lg:text-left">{render(content)}</div> : null}
-      <section className="pb-4 md:pb-8 fl">
+      <section className="pb-4 md:pb-8">
         <div className="md:basis-2/3">
           <div className="grid lg:grid-cols-2 gap-8">
             {currentJob?.projects?.map((project) => (

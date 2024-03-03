@@ -5,31 +5,29 @@ import { getGlobals } from "storyblok/api"
 
 export default function Contact({ socialMedia, contactDetails }) {
   return (
-    <>
-      <section>
-        <div>
-          Email:{" "}
-          <Link href={`mailto:${contactDetails?.Email}`} className="hover:underline">
-            {contactDetails?.Email}
-          </Link>
-        </div>
-        <div>
-          Phone:{" "}
-          <Link href={`tel:${contactDetails?.Phone}`} className="hover:underline">
-            {contactDetails?.Phone}
-          </Link>
-        </div>
+    <section>
+      <div>
+        Email:{" "}
+        <Link href={`mailto:${contactDetails?.Email}`} className="hover:underline">
+          {contactDetails?.Email}
+        </Link>
+      </div>
+      <div>
+        Phone:{" "}
+        <Link href={`tel:${contactDetails?.Phone}`} className="hover:underline">
+          {contactDetails?.Phone}
+        </Link>
+      </div>
 
-        <div className="flex gap-4 pt-8">
-          <a href={socialMedia?.GitHub} target="_blank">
-            <GitHub className="w-8 h-8 aspect-square" />
-          </a>
-          <a href={socialMedia?.LinkedIn} target="_blank">
-            <LinkedIn className="w-8 h-8 aspect-square" />
-          </a>
-        </div>
-      </section>
-    </>
+      <div className="flex gap-4 pt-8">
+        <a href={socialMedia?.GitHub} target="_blank">
+          <GitHub className="w-8 h-8 aspect-square" />
+        </a>
+        <a href={socialMedia?.LinkedIn} target="_blank">
+          <LinkedIn className="w-8 h-8 aspect-square" />
+        </a>
+      </div>
+    </section>
   )
 }
 

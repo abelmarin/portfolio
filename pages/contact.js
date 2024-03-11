@@ -7,7 +7,7 @@ export default function Contact({ socialMedia, contactDetails }) {
   return (
     <section>
       <a
-        href="/Abel-Marin-Resume.docx"
+        href="/Abel-Marin-Jr-Resume.docx"
         download
         className="mb-6 px-4 pt-2 pb-3 text-m3 lg:text-l2 border-2 border-white w-max mx-auto lg:mx-0 !no-underline inline-block"
       >
